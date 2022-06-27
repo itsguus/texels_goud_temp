@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="86px" viewBox="0 0 85 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>crosshair</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="crosshair" transform="translate(0.500000, 0.946900)" stroke="#2A3032" stroke-width="1.417">
+            <path d="M58,42.1321 C58,33.2951 50.837,26.1321 42,26.1321 C33.163,26.1321 26,33.2951 26,42.1321 C26,50.9691 33.163,58.1321 42,58.1321 C50.837,58.1321 58,50.9691 58,42.1321 Z" id="Stroke-3009"></path>
+            <line x1="33" y1="42.1321" x2="0" y2="42.1321" id="Stroke-3011"></line>
+            <line x1="51.2641" y1="42.1321" x2="84.2641" y2="42.1321" id="Stroke-3015"></line>
+            <line x1="42.132" y1="33" x2="42.132" y2="0" id="Stroke-3019"></line>
+            <line x1="42.132" y1="51.2642" x2="42.132" y2="84.2642" id="Stroke-3023"></line>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,53 @@
+{{/* Example:
+
+    {{ partial "image" (dict 
+        "path" "/uploads/logo.png"
+        "size" "400x400"
+        "title" "title_name"
+        "alt" "alt_name"
+        "class" "class_name"
+        "png" true/false
+        "fit" true/false
+    )}}
+    
+*/}}
+{{ $item := . }}
+{{ with .path }}
+    {{ if resources.GetMatch . }}
+        <picture class="{{ $item.class }}">
+            {{ $webpSize := print $item.size " webp" }}
+            {{ $webp := "" }}
+            {{ if $item.fit }}
+                {{ $webp = ((resources.GetMatch .).Fit $webpSize).RelPermalink }}
+            {{ else }}
+                {{ $webp = ((resources.GetMatch .).Fill $webpSize).RelPermalink }}
+            {{ end }}
+            <source srcset="{{ $webp }}" type="image/webp">
+            {{ if $item.png }}
+                {{ $pngSize := print $item.size " png" }}
+                {{ $png := "" }}
+                {{ if $item.fit }}
+                    {{ $png = ((resources.GetMatch .).Fit $pngSize).RelPermalink }}
+                {{ else }}
+                    {{ $png = ((resources.GetMatch .).Fill $pngSize).RelPermalink }}
+                {{ end }}
+                <source srcset="{{ $png }}" type="image/png"> 
+                <img src="{{ $png }}" alt="{{ $item.alt }}" {{ if $item.title }} title="{{ $item.title }}" {{ end }}>
+            {{ else }}
+                {{ $jpgSize := print $item.size " jpg" }}
+                {{ $jpg := "" }}
+                {{ if $item.fit }}
+                    {{ $jpg = ((resources.GetMatch .).Fit $jpgSize).RelPermalink }}
+                {{ else }}
+                    {{ $jpg = ((resources.GetMatch .).Fill $jpgSize).RelPermalink }}
+                {{ end }}
+                <source srcset="{{ $jpg }}" type="image/jpg"> 
+                <img src="{{ $jpg }}" loading="lazy" alt="{{ $item.alt }}" {{ if $item.title }} title="{{ $item.title }}" {{ end }}>
+            {{ end }}
+        </picture>
+    {{ else }}
+        <div class="picture" data-src="{{ . }}">
+            <span>Image not found</span>
+        </div>
+    {{ end }}
+{{ end }}

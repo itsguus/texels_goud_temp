@@ -1,0 +1,19 @@
+{{ $id := print .image | urlize }}
+<li data-id="{{ $id }}">
+    <figure>
+        {{ if in .image ".png" }}
+            {{ partial "image" (dict
+            "path" .image
+            "size" "1600x900"
+            "fit" .contain
+            "class" .contain
+            "png" .contain
+            )}}
+        {{ else }}
+            {{ partial "image" (dict
+            "path" .image
+            "size" "1600x900"
+            )}}
+        {{ end }}
+    </figure>
+</li>

@@ -1,0 +1,32 @@
+<section class="dark bg text {{ .dir }} {{ if .address }}contact {{ end }}">
+    <section class="content {{ .line }}">
+        {{ if .breadcrumbs }}{{ partial "breadcrumbs" .breadcrumbsData }}{{ end }}
+        {{ if .header }}
+            <article>{{ .data }}</article>
+        {{ else }}
+            {{ partial "standard_article" .data }}
+        {{ end }}
+        
+        {{ if .circle }}
+            {{ partial "circle" (dict 
+                    "data" .circleImages
+                    "dir" $.circleDir 
+                    "buttonDown" $.circleButtonDown
+                    "buttonUp" $.circleButtonUp
+            ) }}
+        {{ end }}
+
+        {{ if .address }}
+            <address>
+                <div>
+                    <h4>Adres:</h4>
+                    <p>{{ .data.adres_textarea | safeHTML }}</p>
+                </div>
+                <div>
+                    <h4>Contact:</h4>
+                    <p>{{ .data.contact_textarea | safeHTML }}</p>
+                </div>
+            </address>
+        {{ end }}
+    </section>
+</section>

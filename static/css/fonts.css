@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/staatliches-v3-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Staatliches Regular'), local('Staatliches-Regular'),
+         url('/fonts/staatliches-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/staatliches-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/staatliches-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/staatliches-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/staatliches-v3-latin-regular.svg#Staatliches') format('svg'); /* Legacy iOS */
+}
+
+
+@font-face {
+    font-family: 'Hoefler Text';
+    src: local('Hoefler Text Black Italic'), local('HoeflerText-BlackItalic'),
+        url('/fonts/HoeflerText-BlackItalic.woff2') format('woff2'),
+        url('/fonts/HoeflerText-BlackItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hoefler Text';
+    src: local('Hoefler Text Italic'), local('HoeflerText-Italic'),
+        url('/fonts/HoeflerText-Italic.woff2') format('woff2'),
+        url('/fonts/HoeflerText-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hoefler Text';
+    src: local('Hoefler Text Black'), local('HoeflerText-Black'),
+        url('/fonts/HoeflerText-Black.woff2') format('woff2'),
+        url('/fonts/HoeflerText-Black.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hoefler Text';
+    src: local('Hoefler Text'), local('HoeflerText-Regular'),
+        url('/fonts/HoeflerText-Regular.woff2') format('woff2'),
+        url('/fonts/HoeflerText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galvji';
+    src: local('Galvji-BoldOblique'),
+        url('/fonts/Galvji-BoldOblique.woff2') format('woff2'),
+        url('/fonts/Galvji-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galvji';
+    src: local('Galvji Oblique'), local('Galvji-Oblique'),
+        url('/fonts/Galvji-Oblique.woff2') format('woff2'),
+        url('/fonts/Galvji-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galvji';
+    src: local('Galvji-Bold'),
+        url('/fonts/Galvji-Bold.woff2') format('woff2'),
+        url('/fonts/Galvji-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galvji';
+    src: local('Galvji'),
+        url('/fonts/Galvji.woff2') format('woff2'),
+        url('/fonts/Galvji.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
