@@ -1,7 +1,0 @@
-<article>
-    <h2>{{ .title }}</h2>
-    {{ partial "md" (dict "content" .textarea) }}
-    {{ if and .button_url .button_text }}
-        {{ partial "btn" . }}
-    {{ end }}
-</article>

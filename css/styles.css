@@ -1,0 +1,61 @@
+* {padding: 0; margin: 0; border: 0; box-sizing: border-box; }
+html {font-size: 20px; scroll-behavior: smooth; overscroll-behavior: none;}
+body {font-size: 0.7rem; color: var(--mainColor); font-family: var(--primaryFont); font-weight: normal; background: var(--accentColor); line-height: 1.2;}
+a {text-decoration: none; color: var(--mainColor);}
+p a:hover {text-decoration: underline;}
+ul, ol {list-style-type: none;}
+p {margin-bottom: 1.4em;}
+br {margin:0 !important; height: 0%;}
+strong, em { font-style: normal; font-weight: 300; }
+button { background: none; color: var(--black); }
+address { font-style: normal;}
+
+body::before, body::after {content: ""; opacity: 1; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--black); z-index: -10;}
+body::after { opacity: 0.1; background: url("/img/pattern.svg") center center / 8%; z-index: -10;}
+
+:root {
+    /* Fonts */
+    --primaryFont: "Hoefler Text", serif;
+    --headerFont: "Galvji", sans-serif;
+
+    /* Colors */    
+    --mainColor: #2A3032;
+    --black: #2A3032;
+    --backgroundColor: #F4F0EA;
+    --accentColor: #B2935C; 
+    --accentColor50: #C9B591; 
+    
+    /* Widths */
+    --gutter: 7rem;
+    --maxWidth: 65rem;
+    --maxWidthUltraWide: 128rem;
+    --width: calc(100% - var(--circleRad) - var(--gutter));
+    --circleWidth: 35%; 
+    --circleRad: calc(var(--circleWidth) / 2);
+
+    /* Shadows */
+    --dropShadow: 0px 3px 6px 0 rgba(0,0,0,0.16);
+    --blurShadow: 10px 10px 30px 0 rgba(0,0,0,0.16);
+
+    /* Borders */
+    --borderRadius: 0.5rem; 
+    --halfBorderRadius: calc(var(--borderRadius) / 2);
+
+    /* Logos */
+    --logoWidth: 6rem; 
+}
+
+.dark { 
+    --mainColor: var(--backgroundColor);
+    background-color: #2A3032;
+}
+
+/* =============== HEADERS =============== */
+h1,h2,h3,h4  {font-weight: bold; margin-bottom: 0.75em; font-family: var(--headerFont); }
+h1 { font-size: 1.2rem; text-transform: uppercase;} 
+h2 {font-size: 1.2rem; text-transform: uppercase; }
+h3 {font-size: 1rem;}
+h4 {font-size: 1rem; font-family: var(--primaryFont); font-size: 0.7rem; font-weight: 400; }  
+
+main { width: 100%; height: 100vh; background: var(--mainColor);  display: flex; justify-content: center; align-items: center;}
+main img { max-width: 20rem; width: calc(100% - 4rem); }
